@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="categoriesViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCheck" destination="7BC-NA-GGb" id="4S3-WT-VvO"/>
+                <outlet property="buttonWrong" destination="5Rl-7V-84F" id="X4V-08-Pag"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregunta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-Qz-L5i">
+                    <rect key="frame" x="20" y="94" width="374" height="44"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ4-vK-QXZ">
+                    <rect key="frame" x="20" y="313" width="374" height="69"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="50"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BC-NA-GGb">
+                    <rect key="frame" x="20" y="630" width="164" height="150"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="FsM-Xo-i2t"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="164" id="kUG-YH-d5A"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="checkmark" catalog="system" symbolScale="large" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-7V-84F">
+                    <rect key="frame" x="230" y="630" width="164" height="150"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="164" id="7xn-JD-cSA"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Gx6-85-uHB"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="multiply" catalog="system" symbolScale="large" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qJ8-Qz-L5i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2uT-Sp-rkn"/>
+                <constraint firstItem="DZ4-vK-QXZ" firstAttribute="top" secondItem="qJ8-Qz-L5i" secondAttribute="bottom" constant="175" id="49A-gD-p34"/>
+                <constraint firstItem="5Rl-7V-84F" firstAttribute="leading" secondItem="7BC-NA-GGb" secondAttribute="trailing" constant="46" id="60D-h4-Qb5"/>
+                <constraint firstItem="5Rl-7V-84F" firstAttribute="top" secondItem="DZ4-vK-QXZ" secondAttribute="bottom" constant="248" id="6ar-Da-ZNP"/>
+                <constraint firstItem="7BC-NA-GGb" firstAttribute="top" secondItem="DZ4-vK-QXZ" secondAttribute="bottom" constant="248" id="E7G-X2-bDg"/>
+                <constraint firstItem="qJ8-Qz-L5i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Efo-YP-icP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DZ4-vK-QXZ" secondAttribute="trailing" constant="20" id="Jde-Jd-DYx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Rl-7V-84F" secondAttribute="trailing" constant="20" id="PMd-5e-bjH"/>
+                <constraint firstItem="DZ4-vK-QXZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TOt-bV-jnI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qJ8-Qz-L5i" secondAttribute="trailing" constant="20" id="aV6-sf-DTq"/>
+                <constraint firstItem="5Rl-7V-84F" firstAttribute="leading" secondItem="7BC-NA-GGb" secondAttribute="trailing" constant="46" id="agY-7q-2P6"/>
+                <constraint firstItem="7BC-NA-GGb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="eye-96-RKB"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
