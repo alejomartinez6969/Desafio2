@@ -6,7 +6,10 @@
 //
 
 import UIKit
+
 import Alamofire
+
+
 
 
 
@@ -14,46 +17,59 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var categories = ["Primer Categoria", "Segunda Categoria"]
+    private var categories = ["Primer Categoria", "Segunda Categoria", "Tercera Categoria"]
     
-//    let request=AF.request("https://opentdb.com/api_category.php")
-//    request.responseJSON { (data) in
-//        do {
-//            let categories = try JSONDecoder().decode(Categories.self,
-//            from: data.data!)
-//            print(categories.trivia_categories)
-//            }
-//        catch{
-//    print(error)
-//            }
-                                            }
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell");getCategories()
 
-
-
-    
-extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        categories.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
-        return cell
+    func getCategories(){
+        self.tableView.reloadData()
     }
     
 }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    //Cuantas filas
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        categories.count
     }
-    */
+    
+    //cuantas Celdas
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = categories[indexPath.row]
+        return cell
+        
+        
+//        struct Categories: Codable{
+//            let trivia_categories:[Category]
+//        }
+//
+//
+//        let request = AF.request("https://opentdb.com/api_category.php")
+//        request.responseJSON { (data) in
+//            do {
+//                let categories = try JSONDecoder().decode(Categories.self, from: data.data!)
+//                print (categories.trivia_categories)
+//            }catch{
+//                print ([])
+            }
+        }
+            
+        
+        
+
+    
+    
+    
+    
 
 

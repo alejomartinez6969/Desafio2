@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class tapBarViewController: UITabBarController {
 
@@ -13,7 +14,8 @@ class tapBarViewController: UITabBarController {
         super.viewDidLoad()
 
         
-        //primer Tap
+        //PRIMER TAP
+        
         let firstTabTitle  = "Categories"
         let firstTapImage = UIImage(systemName: "list.dash")
         
@@ -35,7 +37,11 @@ class tapBarViewController: UITabBarController {
         
         viewControllers = [firstTabNavigationController, secondTabNavigationController]
         
-    }
+       
+                }
+            }
+
+
     
 
  
